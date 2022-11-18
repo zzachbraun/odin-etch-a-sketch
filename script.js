@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
-
+let boxes = document.querySelectorAll('.box');
+let color = '#000000';
 drawGrid(16);
 
 function drawGrid(size) {
@@ -16,16 +17,23 @@ function drawGrid(size) {
         }
         container.appendChild(column);
     }
-
-    const boxes = document.querySelectorAll('.box');
+    boxes = document.querySelectorAll('.box');
 
     boxes.forEach((box) => {
         box.addEventListener('mouseover', () => {
-            box.style.backgroundColor = 'black';
+            box.style.backgroundColor = color;
         });
     });
 }
 
+const colorButton = document.querySelector('input');
+colorButton.addEventListener('click', () => {
+    boxes.forEach((box) => {
+        box.addEventListener('mouseover', () => {
+            box.style.backgroundColor = colorButton.value;
+        });
+    });
+})
 
 
 const resetButton = document.querySelector('.reset');

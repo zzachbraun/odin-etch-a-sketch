@@ -8,15 +8,27 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
+
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div class="controls">
-        <button class="box-size">Set Box Size</button>
-        <button class="reset">Reset</button>
+    <h1>Etch-a-Sketch</h1>
+    <div class="wrapper">
+        <div class="controls">
+            <button class="box-size">Set Box Size</button>
+            <button class="reset">Reset</button>
+            <div class="setcolor">
+                <label for="color">Color:</label>
+                <input type="color" id="color" name="color" value="#000000">
+            </div>
+        </div>
+        <div class="container"></div>
+        <div class="blank"></div>
     </div>
-    <div class="container"></div>
+    <div class="footer">Zach Braun © 2022</div>
+
 </body>
 
 </html>
