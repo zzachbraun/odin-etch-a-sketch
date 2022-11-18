@@ -31,6 +31,7 @@ colorButton.addEventListener('click', () => {
     boxes.forEach((box) => {
         box.addEventListener('mouseover', () => {
             box.style.backgroundColor = colorButton.value;
+            color = colorButton.value;
         });
     });
 })
